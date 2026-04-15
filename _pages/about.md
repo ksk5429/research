@@ -14,7 +14,7 @@ profile:
     <p>Seoul, South Korea</p>
 
 news: true
-selected_papers: true
+selected_papers: false
 social: true
 ---
 
