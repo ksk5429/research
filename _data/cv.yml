@@ -1,0 +1,97 @@
+cv:
+  name: Kyeong Sun Kim
+  label: PhD candidate — Structural Health Monitoring & Digital Twins
+  email: kyeongsunkim@snu.ac.kr
+  phone: ""
+  location: Seoul, South Korea
+  image: ""
+  summary: >
+    PhD candidate at Seoul National University working on Trust-weighted Multi-modal
+    Evidence Fusion (TMEF). Dissertation is the SHM instance — scour assessment of
+    offshore wind turbine tripod suction-bucket foundations. Director at Marine Master
+    Technology Co., engineer at Myungil Jack-Up Ocean.
+
+  social_networks:
+    - network: GitHub
+      username: ksk5429
+
+  address:
+    street: Dept. Civil & Env. Engineering
+    city: Seoul
+    region: Seoul
+    postalCode: "08826"
+    countryCode: KR
+
+  sections:
+    Education:
+      - institution: Seoul National University
+        location: Seoul, South Korea
+        url: https://en.snu.ac.kr/
+        area: Civil & Environmental Engineering
+        studyType: PhD (candidate)
+        start_date: 2021
+        end_date: 2026
+        score: ""
+        courses: "Geotechnical Engineering, Offshore Structures, Structural Health Monitoring"
+        highlights:
+          - "Dissertation: Integrated Numerical and Digital Twin Framework for Scour Assessment of OWT with Tripod Suction Bucket Foundations."
+          - "Defense scheduled September 2026 (advisor: Prof. Sung-Ryul Kim)."
+
+      - institution: University of California, Berkeley
+        location: Berkeley, CA, USA
+        url: https://ce.berkeley.edu/
+        area: Civil & Environmental Engineering
+        studyType: BS
+        start_date: 2012
+        end_date: 2016
+
+    Experience:
+      - company: Marine Master Technology Co., Ltd.
+        position: Director
+        location: South Korea
+        start_date: 2024-01-01
+        end_date: present
+        summary: Engineering direction on offshore marine installation and lifting systems.
+
+      - company: Myungil Jack-Up Ocean
+        position: Engineer
+        location: South Korea
+        start_date: 2017-09-01
+        end_date: present
+        summary: Korea's sole manufacturer of modular jack-up barges. Structural and geotechnical design for offshore operations.
+
+    Awards:
+      - title: Young Scientist Award
+        authors:
+          - Seoul National University
+        date: 2024
+        awarder: Seoul National University
+        summary: Recognition for research contributions in SHM and digital-twin frameworks for offshore wind.
+
+    Interests:
+      - name: Research
+        icon: fa-solid fa-flask
+        keywords: "structural health monitoring, digital twins, physics-informed ML, Bayesian inference, multi-agent AI, value of information, centrifuge modeling, offshore geotechnics"
+
+    Skills:
+      - name: Programming
+        level: Advanced
+        icon: fa-solid fa-code
+        keywords: "Python, MATLAB, LaTeX"
+
+      - name: Engineering software
+        level: Advanced
+        icon: fa-solid fa-gears
+        keywords: "OpenSees / OpenSeesPy, OptumGX, PLAXIS, SAP2000, Abaqus, OpenFAST"
+
+      - name: AI / agent tooling
+        level: Advanced
+        icon: fa-solid fa-robot
+        keywords: "Claude Code, LLM agents, multi-agent orchestration"
+
+    Languages:
+      - name: Korean
+        summary: "Native speaker"
+
+      - name: English
+        summary: "Fluent"
