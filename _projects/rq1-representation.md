@@ -1,58 +1,43 @@
 ---
 layout: page
-title: RQ1 — Unified representation
-description: Embedding heterogeneous evidence into a shared, physically meaningful latent space.
-img: assets/img/7.jpg
+title: "RQ1 — Unified representation of heterogeneous SHM evidence"
+description: A physically-constrained latent space for multi-modal SHM sensor data.
+img: assets/img/12.jpg
 importance: 1
 category: tmef
-permalink: /research/rq1-representation/
+related_publications: true
 ---
 
-## Problem statement
+## Research question
 
-How do you embed physically different signal types — acceleration time histories,
-discrete laboratory readings, expensive FEM outputs, expert scores — into a shared latent
-space where Bayesian inference becomes tractable? What minimum structural constraint keeps
-the embedding physically meaningful? Too much shared-space collapses modality-specific
-structure; too little means no fusion.
+How do you embed physically different SHM signal types — continuous waveforms (vibration, strain, acoustic emission), discrete observations (CPT profile, bathymetric survey), FEM scalar outputs (V-H-M envelope, natural frequency), inspection-report text, maintenance logs — into a shared latent space where Bayesian inference is tractable? What minimum structural constraint keeps the embedding physically meaningful?
+
+**Challenge.** Too much shared-space collapses modality-specific structure. Too little means no fusion.
 
 ## Method
 
-- **Physics-informed encoder** that maps scour geometry, foundation response, and soil state
-  into a low-dimensional latent with Buckingham-Pi groups as the invariance axis.
-- **Cross-domain features** constructed from dimensionless numbers so centrifuge, FEM, and
-  field data share the same coordinate system.
-- **Correlation-preserving loss** penalising embeddings that destroy known physical
-  monotonicities (e.g. natural-frequency vs scour-depth).
-- **Supervised contrastive head** to align runs differing only in noise while separating
-  runs differing in physics.
+- **Modality encoders.** CNN for vibration waveforms; graph-NN or functional encoder for CPT profiles-as-functions; MLP for scalar FEM outputs; LLM-based text encoder for inspection logs.
+- **Shared latent.** Contrastive learning anchored on a decision-relevant quantity (e.g. S/D for scour assessment, damage index for bridges), not on image modality.
+- **Physics constraint.** Latent must preserve Buckingham-Pi non-dimensional groups (my PhD Ch 4 identified strain-acceleration coherence at f₁ as a scale-invariant feature with 100% LOSO across 5 centrifuge soils, p = 0.0003 — a special case of this RQ).
+- **Validation.** Embedding must reproduce Ch 4's LOSO result as a baseline on the offshore-wind dataset, AND generalise to a second SHM structure type (transmission-tower foundation, co-author dataset J8–J12).
 
-## Primary case study
+## Case studies (inside SHM only)
 
-PhD Ch 4 establishes the empirical basis. A Buckingham-Pi feature set, trained only on
-centrifuge tests, transfers to FEM and to 32 months of field data from a 4.2 MW offshore
-wind turbine in Gunsan. Leave-one-scenario-out accuracy: **100% (p = 0.0003)**. 1,794 Monte
-Carlo runs confirm that the latent coordinate recovered under arbitrary soil-parameter
-draws remains monotone in scour depth (Spearman = 0.9976 on dim-1).
+| Case | Data | Role |
+|---|---|---|
+| Primary | Offshore wind tripod suction bucket — 22 centrifuge + 1,794 MC + 32 mo field | Paper 1 headline |
+| Secondary | Transmission-tower shallow foundation (J8–J12, my co-author line) | Cross-structure generalisation |
 
-## Secondary case study
+## Novel contributions
 
-Biological-age composite on NHANES / UK Biobank cohorts using Horvath 2013, PhenoAge,
-GrimAge, and DunedinPACE clocks. Each clock is a different modality with its own noise and
-domain of validity; the goal is a shared embedding that lets a clinician reason jointly
-about all four.
+1. Physics-constrained multi-modal latent for SHM — alternative to image-anchored binding.
+2. First demonstration of cross-structure representation transfer (offshore wind → transmission tower) inside SHM with a single shared encoder.
+3. Open-source release as a TMEF extension of [Op³](https://github.com/ksk5429/numerical_model).
 
 ## Target venue
 
-*Reliability Engineering & System Safety* — first RQ1 paper bundled with VoI results
-(drafted 2026-04-15, submission within 2 weeks).
+*Mechanical Systems and Signal Processing* (Q1, IF ~8.4), *Structural Health Monitoring* (Q1, IF ~5.7), or *Advanced Engineering Informatics* (Q1).
 
 ## Status
 
-Planning complete. Primary case study has a publishable result (Ch 4 / Paper A draft).
-Secondary case study queued for postdoc year 1 (2026–2027).
-
-## Related
-
-- [Op³ framework](/research/op3/) — encoder implementation, 1,794 MC runs.
-- [PhD dissertation](/research/phd-dissertation/) — Ch 4 primary evidence.
+Planning. Paper 1 of TMEF, targeted months 1–8 of the postdoc (Oct 2026 – May 2027).

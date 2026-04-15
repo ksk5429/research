@@ -1,56 +1,48 @@
 ---
 layout: page
-title: RQ2 — Trust-weighted fusion
-description: Source-aware credibility when evidence sources disagree or fail.
-img: assets/img/8.jpg
+title: "RQ2 — Trust-weighted Bayesian fusion with source-aware credibility"
+description: Learnable, dynamic trust hyperparameters for SHM evidence fusion.
+img: assets/img/11.jpg
 importance: 2
 category: tmef
-permalink: /research/rq2-trust-fusion/
+related_publications: true
 ---
 
-## Problem statement
+## Research question
 
-Given that evidence sources have different reliability profiles, how do you update trust
-when sources disagree, when one source has a known failure mode, or when the decision
-consequence changes? Classical Bayesian fusion assumes fixed likelihoods — real decisions
-have variable trust.
+PhD Ch 7 fused three channels (frequency, capacity, Ch 4 cross-domain feature) with *fixed* likelihoods. Real SHM decisions have variable trust: a frequency estimate during a storm is untrustworthy; an FEM output outside its V&V envelope is untrustworthy; an LLM agent reasoning outside its training distribution is untrustworthy. How do you perform Bayesian posterior inference with **explicit, dynamic, learnable trust hyperparameters** that update when sources disagree, fail, or operate outside their validated envelope?
 
 ## Method
 
-- **Source-specific likelihood networks** trained per modality with calibration targets
-  (Brier, ECE), not just accuracy.
-- **Trust update** inspired by Dempster–Shafer evidence theory with a discount factor tied
-  to observed cross-source disagreement.
-- **Failure-mode priors** encoded from domain knowledge (e.g. sensor icing, centrifuge
-  scaling violation, FEM mesh dependence).
-- **Decision-consequence coupling** — the same evidence can map to different posteriors if
-  the cost of a wrong call changes (asymmetric loss).
+- **Hierarchical Bayesian model** (Gelman et al. 2013) with per-channel trust hyperparameters `τ_A`, `τ_B`, `τ_C`.
+- **Subjective Logic** (Jøsang 2001, 2016) — belief / disbelief / uncertainty triple as the fusion algebra. Under-used in SHM but a near-perfect fit.
+- **Conflict-aware operators** — Yager's rule, PCR5 (Smarandache-Dezert).
+- **Evidential Deep Learning** (Sensoy et al. 2018, NeurIPS) — NN outputs belief masses, not probabilities; RQ2 brings this into SHM.
+- **Trust-update rules.** Disagreement-triggered decay, V&V-envelope gating, consequence-weighted sharpening.
+- **Multi-agent extension.** K-Fish-style 9-agent LLM swarm where each agent is an evidence source with its own trust profile. Calibrator agent produces audit updates.
 
-## Primary case study
+## Case studies (inside SHM only)
 
-SHM fusion across three heterogeneous sources for the Gunsan 4.2 MW tripod: (i) 32 months
-of accelerometer streams (continuous, high trust in normal regime, degrades after storm
-events), (ii) discrete centrifuge comparison points (high trust, sparse), (iii) Monte-Carlo
-FEM priors (1,794 runs, trust varies with soil-parameter confidence). The fusion layer
-must recover a scour posterior consistent with the twin ROV survey in summer 2025.
+| Case | Data | Role |
+|---|---|---|
+| Primary | Ch 7 four-scenario set (healthy / early / critical / near-failure) with injected source-failure perturbations | Paper 2 headline |
+| Secondary | K-Fish 9-agent risk assessments on 50 hindcast SHM events (Gunsan + published incidents + synthetic) | Multi-agent generalisation |
 
-## Secondary case study
+## Novel contributions
 
-Biomedical-age fusion under disagreement. When Horvath 2013 and GrimAge disagree by more
-than 5 years on the same subject, what weighting is defensible? Which clock is
-down-weighted in which subpopulation?
+1. First formal trust-weighted extension of SHM Bayesian fusion.
+2. Bridge between subjective logic (classical evidence theory) and evidential deep learning.
+3. Agent-specific trust for multi-agent LLM — formalises K-Fish's informal Polymarket deployment (Brier 0.213).
+4. Empirical trust-update rules calibrated on SHM decision consequences.
 
 ## Target venue
 
-*Reliability Engineering & System Safety* or *Mechanical Systems and Signal Processing*
-(2027 Q1 target).
+***Information Fusion*** (Q1, IF ~18 — the premier venue), *Reliability Engineering & System Safety* (IF ~10), or *npj AI*.
+
+## Ryu-group lineage
+
+Directly extends Park, Moon, Ryu (2026) *npj AI* 2:10 (MCP-SIM self-correcting multi-agent LLM framework) by adding explicit agent-trust hyperparameters. Ryu's group provides the multi-agent architecture; TMEF adds the trust layer.
 
 ## Status
 
-In planning. Depends on RQ1 embedding. Postdoc year 1–2 (2026–2027).
-
-## Related
-
-- [Op³ framework](/research/op3/) — hosts the MC prior machinery.
-- [K-Fish swarm](/research/k-fish/) — Calibrator agent is a trust-weighted fusion prototype
-  at the LLM-ensemble level.
+Planning. Paper 2 of TMEF, targeted months 7–14 of the postdoc.

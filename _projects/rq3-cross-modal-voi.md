@@ -1,55 +1,51 @@
 ---
 layout: page
-title: RQ3 — Cross-modal Value of Information
-description: Optimal measurement sequencing when modalities differ in cost and information gain.
-img: assets/img/9.jpg
+title: "RQ3 — Value-of-Information across cost-heterogeneous SHM modalities"
+description: Modality-invariant VoI for ranking next SHM measurements under cost, time, and information-gain heterogeneity.
+img: assets/img/10.jpg
 importance: 3
 category: tmef
-permalink: /research/rq3-cross-modal-voi/
+related_publications: true
 ---
 
-## Problem statement
+## Research question
 
-When modalities differ in cost, time-to-result, and information gain per unit cost, how do
-you design the optimal sequence of next measurements? Can VoI be evaluated **before** a
-measurement is taken, using prior distributions over outcomes? Can VoI be made
-modality-invariant, so engineers can compare a $200k ROV survey against a $5k lab index
-test on the same axis?
+A Gunsan plant operator can order a 10-minute spectral analysis ($0), a 4-hour extended OMA run ($500 in crew time), a 1-week bathymetric survey ($50k + boat time), or a 2-week CPT at the foundation ($500k + dredge ship). Each has different information gain about the same latent state (true S/D). PhD Ch 7 VoI ranked *single-modality* observations (capacity vs frequency); it cannot handle cost heterogeneity or modality sequencing. The SHM-VoI literature (Straub 2014; Pozzi & Der Kiureghian 2011) treats unimodal cases.
+
+**Hypothesis.** A **modality-invariant VoI** framework — where each candidate measurement is scored by expected information gain divided by (cost × time-to-result) under the current posterior — generalises across SHM modalities and across SHM structure types. Modality-invariance comes from computing VoI in the RQ1 latent space, not in raw sensor space.
 
 ## Method
 
-- **Pre-posterior VoI** on the TMEF latent, computed over the prior predictive distribution
-  of each candidate modality.
-- **Cost-normalised VoI** in currency of a common decision metric (e.g. bits of scour-depth
-  uncertainty per USD).
-- **Sequential VoI** — next-best-measurement chosen conditional on currently realised
-  evidence, with pruning for intractable branches.
-- **Modality-invariant expression** by working in latent coordinates from RQ1 instead of
-  raw physical units.
+- VoI formulation in the RQ1 latent: expected KL-divergence reduction per (cost, time) unit.
+- **Sequential decision.** Pick the next measurement that maximises expected posterior variance reduction; re-plan after each observation.
+- Baselines: classical fixed-budget Chaloner-Verdinelli design, BALD active learning (Houlsby 2011), multi-fidelity VoI (Peherstorfer-Willcox-Gunzburger 2018, *SIAM Rev.*).
 
-## Primary case study
+## Case studies (inside SHM only)
 
-Op³ Studio tool for operators of the Gunsan 4.2 MW turbine. Given the current fused
-scour posterior, the tool ranks: ROV bathymetric survey, accelerometer campaign extension,
-CPT verification drop, additional FEM sweep. Paper A already validates the unimodal VoI on
-this case; RQ3 extends to the multi-modal, sequential setting.
+| Case | Data | Role |
+|---|---|---|
+| Primary | Gunsan 32-month archive — next-measurement ranking across vibration, strain, bathymetry, CPT, FEM update | Paper 3 headline |
+| Secondary | Published SHM benchmarks — IASC-ASCE SHM benchmark / Z-24 Bridge / Dowling Hall footbridge — retrospective VoI replay | Structure-type generalisation |
 
-## Secondary case study
+## Benchmark targets
 
-Clinical-panel sequencing for biological age. Given a composite posterior from four clocks,
-which next test (blood panel, functional measure, grip strength) buys the most uncertainty
-reduction per dollar?
+- SHM primary: 20 Gunsan event windows with known outcomes → VoI-ordered sequence vs dissertation's unimodal VoI vs calendar baseline. **Target: 30%+ further cost reduction beyond Ch 7's 40–70%.**
+- SHM secondary: match or improve detection-per-dollar vs the published decision baselines for each benchmark dataset.
+
+## Novel contributions
+
+1. First cross-modal SHM VoI framework validated on both offshore and bridge data.
+2. Explicit cost-time heterogeneity in the information gain calculus.
+3. Sequential-decision extension — not just static one-shot VoI.
 
 ## Target venue
 
-*Reliability Engineering & System Safety* — dedicated RQ3 paper (2027 target).
+*Structural Safety* (Q1, IF ~6), *Reliability Engineering & System Safety* (IF ~10), or *Decision Analysis* (INFORMS).
+
+## Ryu-group lineage
+
+Ryu's direction [3] — expert-guided sampling. Active learning / VoI is not a current Ryu-group theme; this paper opens it.
 
 ## Status
 
-Unimodal VoI (the restricted version of RQ3) is already done in Paper A (drafted
-2026-04-15). Cross-modal sequential version queued for postdoc year 2.
-
-## Related
-
-- [Paper A](/research/phd-dissertation/) — unimodal VoI proof-of-concept.
-- [Op³ framework](/research/op3/) — hosts VoI evaluation.
+Planning. Paper 3 of TMEF, targeted months 13–20 of the postdoc.

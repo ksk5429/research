@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD candidate, Seoul National University · Research program — <a href="/research/tmef/">Trust-weighted Multi-modal Evidence Fusion</a>
+subtitle: PhD candidate, Seoul National University · Research program — <a href="/research/research/">Trust-weighted Multi-modal Evidence Fusion for SHM</a>
 
 profile:
   align: right
@@ -16,40 +16,14 @@ profile:
 news: true
 selected_papers: true
 social: true
-
-announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
-
-latest_posts:
-  enabled: false
-  scrollable: true
-  limit: 3
 ---
 
-I study **how heterogeneous evidence becomes trustworthy decisions**.
+I study **how heterogeneous evidence becomes trustworthy decisions in structural health monitoring (SHM)**.
 
-Safety-critical engineering decisions — is this offshore foundation healthy? is this
-installation safe to proceed? — are made from evidence that arrives in wildly different forms:
-continuous sensor streams, discrete lab results, expensive engineering simulations, expert
-judgment, archival reports, AI-agent recommendations. Each source has its own reliability,
-cost, and failure mode.
+A modern SHM decision — is this offshore foundation healthy? is this bridge safe to keep open? — is made by fusing evidence that arrives in very different forms. Continuous sensor streams (accelerometers, strain gauges, fiber optics, acoustic emission). Discrete updates (bathymetric surveys, inspection reports, CPT). Expensive engineering simulations (FEM, PISA, limit-equilibrium analyses). Expert judgment from the site operator. Recommendations from an AI agent. Each evidence source has its own reliability, cost, and failure mode. Classical Bayesian fusion treats the likelihoods as fixed; classical value-of-information is unimodal; classical attribution ignores the fusion layer entirely.
 
-My research program, **Trust-weighted Multi-modal Evidence Fusion (TMEF)**, formalises this
-problem across four research questions: unified representation of heterogeneous evidence,
-trust-weighted fusion with source-aware credibility, cross-modal value of information, and
-trust calibration for AI-mediated composite metrics. My PhD dissertation at SNU is the SHM
-instance of this framework — validated on 22 centrifuge tests, 1,794 Monte Carlo simulations,
-and 32 months of field monitoring on a 4.2 MW offshore wind turbine. Full program in the
-[research](/research/tmef/) section.
+My research program, **Trust-weighted Multi-modal Evidence Fusion (TMEF)**, formalises the missing pieces through four research questions — unified representation of heterogeneous SHM evidence, trust-weighted Bayesian fusion with source-aware credibility, cross-modal value-of-information under cost heterogeneity, and trust calibration plus attribution for AI-mediated SHM decisions. The program is grounded in established Bayesian-fusion and multi-sensor-fusion literatures (Jøsang subjective logic, Dempster-Shafer, Ades-Sutton evidence synthesis, Straub VoI, Avci SHM deep-learning fusion). My PhD dissertation at SNU is the SHM instance already validated — 22 centrifuge tests at the KAIST 70g facility, 1,794 Monte Carlo simulations, and 32 months of field monitoring on a 4.2 MW offshore wind turbine in Gunsan. Full program in the [research](/research/research/) section.
 
-In parallel I maintain [Op³](https://github.com/ksk5429/numerical_model) — an open-source
-Python framework for scour assessment of offshore wind turbine foundations (140 tests, 39 V&V
-benchmarks, PyPI-distributed). I also build [K-Fish](https://github.com/ksk5429/quant), a
-9-agent LLM swarm whose Calibrator audits its own reasoning.
+In parallel I maintain [Op³](https://github.com/ksk5429/numerical_model) — an open-source Python framework for scour assessment of offshore wind turbine foundations (140 tests, 39 V&V benchmarks, PyPI-distributed). I also build [K-Fish](https://github.com/ksk5429/quant), a 9-agent LLM swarm whose Calibrator agent audits its own reasoning — a precursor architecture for trust-weighted multi-agent evidence aggregation in SHM.
 
-I hold a BS in Civil & Environmental Engineering from UC Berkeley (2016) and will defend my
-PhD at SNU in September 2026 under Prof. Sung-Ryul Kim. I also serve as Director at Marine
-Master Technology Co. and as an engineer at Myungil Jack-Up Ocean, Korea's sole manufacturer
-of modular jack-up barges.
+I hold a BS in Civil & Environmental Engineering from UC Berkeley (2016) and will defend my PhD at SNU in September 2026 under Prof. Sung-Ryul Kim. I also serve as Director at Marine Master Technology Co. and as an engineer at Myungil Jack-Up Ocean.
