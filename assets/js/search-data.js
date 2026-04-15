@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-research",
           title: "research",
-          description: "Trust-weighted Multi-modal Evidence Fusion (TMEF) — one thesis, four research questions.",
+          description: "Trust-weighted Multi-modal Evidence Fusion for Structural Health Monitoring.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/research/";
@@ -129,26 +129,26 @@ ninja.data = [{
           description: "Integrated Numerical and Digital Twin Framework for Scour Assessment of OWT with Tripod Suction Bucket Foundations.",
           section: "Projects",handler: () => {
               window.location.href = "/research/research/phd-dissertation/";
-            },},{id: "projects-rq1-unified-representation",
-          title: 'RQ1 — Unified representation',
-          description: "Embedding heterogeneous evidence into a shared, physically meaningful latent space.",
+            },},{id: "projects-rq1-unified-representation-of-heterogeneous-shm-evidence",
+          title: 'RQ1 — Unified representation of heterogeneous SHM evidence',
+          description: "A physically-constrained latent space for multi-modal SHM sensor data.",
           section: "Projects",handler: () => {
-              window.location.href = "/research/research/rq1-representation/";
-            },},{id: "projects-rq2-trust-weighted-fusion",
-          title: 'RQ2 — Trust-weighted fusion',
-          description: "Source-aware credibility when evidence sources disagree or fail.",
+              window.location.href = "/research/projects/rq1-representation/";
+            },},{id: "projects-rq2-trust-weighted-bayesian-fusion-with-source-aware-credibility",
+          title: 'RQ2 — Trust-weighted Bayesian fusion with source-aware credibility',
+          description: "Learnable, dynamic trust hyperparameters for SHM evidence fusion.",
           section: "Projects",handler: () => {
-              window.location.href = "/research/research/rq2-trust-fusion/";
-            },},{id: "projects-rq3-cross-modal-value-of-information",
-          title: 'RQ3 — Cross-modal Value of Information',
-          description: "Optimal measurement sequencing when modalities differ in cost and information gain.",
+              window.location.href = "/research/projects/rq2-trust-fusion/";
+            },},{id: "projects-rq3-value-of-information-across-cost-heterogeneous-shm-modalities",
+          title: 'RQ3 — Value-of-Information across cost-heterogeneous SHM modalities',
+          description: "Modality-invariant VoI for ranking next SHM measurements under cost, time, and information-gain heterogeneity.",
           section: "Projects",handler: () => {
-              window.location.href = "/research/research/rq3-cross-modal-voi/";
-            },},{id: "projects-rq4-trust-calibration-amp-attribution",
-          title: 'RQ4 — Trust calibration &amp;amp; attribution',
-          description: "Credit, blame, and appropriate override for AI-mediated engineering decisions.",
+              window.location.href = "/research/projects/rq3-cross-modal-voi/";
+            },},{id: "projects-rq4-trust-calibration-and-attribution-for-ai-mediated-shm-decisions",
+          title: 'RQ4 — Trust calibration and attribution for AI-mediated SHM decisions',
+          description: "Credit, blame, and operator trust calibration for multi-modal SHM composite outputs.",
           section: "Projects",handler: () => {
-              window.location.href = "/research/research/rq4-attribution/";
+              window.location.href = "/research/projects/rq4-attribution/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
