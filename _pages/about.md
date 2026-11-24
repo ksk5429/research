@@ -19,7 +19,7 @@ selected_papers: false
 social: false
 ---
 
-Kyeong Sun Kim works on offshore wind turbine foundations and how to monitor them: how scour changes the natural frequency of a
+The author works on offshore wind turbine foundations and how to monitor them: how scour changes the natural frequency of a
 turbine on a tripod suction-bucket foundation, how long-term vibration monitoring can track foundation stiffness, how
 foundations fail in uplift, studied by centrifuge tests and image-based measurement, and how numerical limit analysis
 and digital twins can support these questions.
