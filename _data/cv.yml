@@ -1,15 +1,14 @@
 cv:
   name: Kyeong Sun Kim
-  label: PhD candidate — Structural Health Monitoring & Digital Twins
-  email: kyeongsunkim@snu.ac.kr
+  label: Offshore wind foundations, structural health monitoring and digital twins
+  email: ""
   phone: ""
   location: Seoul, South Korea
   image: ""
   summary: >
-    PhD candidate at Seoul National University working on Trust-weighted Multi-modal
-    Evidence Fusion (TMEF). Dissertation is the SHM instance — scour assessment of
-    offshore wind turbine tripod suction-bucket foundations. Director at Marine Master
-    Technology Co., engineer at Myungil Jack-Up Ocean.
+    PhD, Seoul National University (2026); KAIST InnoCORE PRISM-AI Center. Research on scour and
+    natural frequency of offshore wind turbine foundations, structural health monitoring, foundation
+    uplift, limit analysis and digital twins.
 
   social_networks:
     - network: GitHub
@@ -28,14 +27,14 @@ cv:
         location: Seoul, South Korea
         url: https://en.snu.ac.kr/
         area: Civil & Environmental Engineering
-        studyType: PhD (candidate)
+        studyType: PhD
         start_date: 2021
         end_date: 2026
         score: ""
         courses: "Geotechnical Engineering, Offshore Structures, Structural Health Monitoring"
         highlights:
           - "Dissertation: Integrated Numerical and Digital Twin Framework for Scour Assessment of OWT with Tripod Suction Bucket Foundations."
-          - "Defense scheduled September 2026 (advisor: Prof. Sung-Ryul Kim)."
+          - "Advisor: Prof. Sung-Ryul Kim."
 
       - institution: University of California, Berkeley
         location: Berkeley, CA, USA
@@ -44,21 +43,6 @@ cv:
         studyType: BS
         start_date: 2012
         end_date: 2016
-
-    Experience:
-      - company: Marine Master Technology Co., Ltd.
-        position: Director
-        location: South Korea
-        start_date: 2024-01-01
-        end_date: present
-        summary: Engineering direction on offshore marine installation and lifting systems.
-
-      - company: Myungil Jack-Up Ocean
-        position: Engineer
-        location: South Korea
-        start_date: 2017-09-01
-        end_date: present
-        summary: Korea's sole manufacturer of modular jack-up barges. Structural and geotechnical design for offshore operations.
 
     Awards:
       - title: Young Scientist Award

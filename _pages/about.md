@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD candidate · Seoul National University · <a href="/research/research/">Research program — TMEF for SHM</a>
+subtitle: KAIST InnoCORE PRISM-AI Center · PhD, Seoul National University
 
 profile:
   align: right
@@ -10,38 +10,92 @@ profile:
   image_circular: false
   more_info: >
     <p><strong>Kyeong Sun Kim (김경선)</strong></p>
-    <p>Dept. Civil & Env. Engineering</p>
-    <p>Seoul National University</p>
-    <p>Seoul, South Korea</p>
-    <p><a href="mailto:kyeongsunkim@snu.ac.kr">kyeongsunkim@snu.ac.kr</a></p>
+    <p>KAIST InnoCORE PRISM-AI Center</p>
+    <p>South Korea</p>
     <p><a href="https://github.com/ksk5429">github.com/ksk5429</a></p>
 
-news: true
+news: false
 selected_papers: false
 social: false
 ---
 
-## How does heterogeneous evidence become trustworthy decisions?
+I work on offshore wind turbine foundations and how to monitor them: how scour changes the natural frequency of a
+turbine on a tripod suction-bucket foundation, how long-term vibration monitoring can track foundation stiffness, how
+foundations fail in uplift, studied by centrifuge tests and image-based measurement, and how numerical limit analysis
+and digital twins can support these questions.
 
-A modern SHM decision — is this offshore foundation healthy? is this bridge safe to keep open? — fuses evidence that arrives in radically different forms: continuous sensor streams, discrete inspection campaigns, expensive engineering simulations, expert judgment, AI-agent recommendations. Each source has its own reliability, cost, time-to-result, and failure mode.
+Detailed status of every paper and research line, the literature synthesis and the writing workflow are on
+[research notes](https://ksk5429.github.io/research-notes/).
 
-Classical Bayesian fusion treats the likelihoods as fixed. Classical value-of-information is unimodal. Classical attribution ignores the fusion layer entirely. My research program, **Trust-weighted Multi-modal Evidence Fusion (TMEF)**, formalises the missing pieces through four research questions and validates them on structural health monitoring data I collected across centrifuge, simulation, and 32 months of field deployment.
+## Research themes
 
-**The four research questions** I work on:
+- **Scour and natural frequency of offshore wind turbines.** Centrifuge tests and calibrated numerical models of a
+  4.2 MW turbine on a tripod suction-bucket foundation.
+- **Structural health monitoring.** Correcting measured natural frequencies for operating and environmental
+  conditions, and a Kalman-filter digital twin for tracking foundation stiffness.
+- **Uplift of foundations.** Progressive failure of inverted-T foundations on level and sloping ground, observed by
+  particle image velocimetry (PIV) in the centrifuge and studied numerically.
+- **Analysis and measurement software.** K-ponytail, a finite element limit analysis program, and K-DIC, a digital
+  image correlation program for laboratory measurements; both in development.
 
-1. **Unified representation.** Can we embed vibration, strain, CPT, FEM, and inspection text into one physics-constrained latent manifold without losing modality-specific structure?
-2. **Trust-weighted fusion.** Can SHM Bayesian inference accommodate dynamic, consequence-coupled trust hyperparameters that respond to disagreement and envelope violations?
-3. **Cross-modal VoI.** Can we rank a 10-minute spectral analysis, a 1-week bathymetry, and a 2-week CPT on one modality-invariant cost-per-information scale?
-4. **Attribution & accountability.** When an AI-mediated SHM decision is wrong, can we assign credit and blame across sensor, model, AI, and human in a way that calibrates trust?
+## Publications
 
-The program rests on established foundations — Dempster-Shafer, Jøsang subjective logic, Ades-Sutton evidence synthesis, Straub VoI, Avci SHM fusion. Full program, creative solution approaches, and target venues are on the [research page](/research/research/).
+### Journal papers
 
-## What I've built
+1. Kim, K.-S., Oh, S.-W., Kim, B.-S., Kim, S.-R. (2025). Investigating scour impacts on natural frequency changes and
+   sensitivity in offshore wind turbine with tripod suction bucket foundations in sand. *Ocean Engineering* 342,
+   123084. [doi:10.1016/j.oceaneng.2025.123084](https://doi.org/10.1016/j.oceaneng.2025.123084)
+2. Kim, K.-S., Oh, S.-W., Hong, S., Kim, S.-R. (2026). Scour-induced natural frequency degradation of offshore wind
+   turbines with tripod bucket foundations using a 3D FE-calibrated Winkler model. *Ocean Engineering* 362, 126270.
+   [doi:10.1016/j.oceaneng.2026.126270](https://doi.org/10.1016/j.oceaneng.2026.126270)
+3. Kim, K.-S., Oh, S.-W., Hong, S., Kim, B.-S., Yu, H.-S., Kim, S.-R. (2026). Centrifuge assessment of saturation and
+   backfill effects on scour-induced response of offshore wind turbine with tripod suction bucket foundations.
+   *Ocean Engineering* 362, 126440. [doi:10.1016/j.oceaneng.2026.126440](https://doi.org/10.1016/j.oceaneng.2026.126440)
+4. Gu, K.-Y., Tran, N. X., Han, J. M., Kim, K.-S., Ham, K.-W., Kim, S.-R. (2024). Centrifuge study on the uplift
+   behavior of spread foundation for transmission tower in sand. *Canadian Geotechnical Journal* 61(7), 1418–1432.
+   [doi:10.1139/cgj-2023-0065](https://doi.org/10.1139/cgj-2023-0065)
+5. Han, J. M., Gu, K.-Y., Kim, K.-S., Ham, K.-W., Kim, S.-R. (2024). Calibration of the resistance factors for the
+   LRFD of shallow foundations of transmission towers under uplift loading. *International Journal of Geomechanics*
+   24(8), 04024168. [doi:10.1061/IJGNAI.GMENG-9481](https://doi.org/10.1061/IJGNAI.GMENG-9481)
+6. Gu, K.-Y., Tran, N. X., Han, J. M., Kim, K.-S., Ham, K.-W., Kim, S.-R. (2023). Semianalytical solution for the
+   uplift bearing capacity of spread foundations in sand. *International Journal of Geomechanics* 23(11), 04023193.
+   [doi:10.1061/IJGNAI.GMENG-8167](https://doi.org/10.1061/IJGNAI.GMENG-8167)
+7. Han, J. M., Gu, K.-Y., Kim, K.-S., Ham, K.-W., Kim, S.-R. (2023). Reliability-based serviceability limit state
+   design of spread foundations under uplift loading in cohesionless soils. *Georisk* 17(4), 635–650.
+   [doi:10.1080/17499518.2023.2164900](https://doi.org/10.1080/17499518.2023.2164900)
+8. Han, J. M., Gu, K.-Y., Kim, K.-S., Jo, S.-A., Kim, S.-R. (2022). Database classification for LRFD of spread
+   foundations under uplift loading in cohesionless soils. *Probabilistic Engineering Mechanics* 69, 103266.
+   [doi:10.1016/j.probengmech.2022.103266](https://doi.org/10.1016/j.probengmech.2022.103266)
 
-- **PhD dissertation (SNU, defense 2026-09)** — an integrated numerical and digital-twin framework for scour assessment of offshore wind turbine foundations. 22 centrifuge tests at the KAIST 70g facility, 1,794 Monte Carlo simulations, 32 months of field monitoring on a 4.2 MW turbine in Gunsan, 22,617 analysis windows with zero false alarms. Ch 7's three-channel Bayesian fusion delivered 67 % posterior σ reduction and 40–70 % realized-cost reduction vs calendar inspection.
-- **[Op³](https://github.com/ksk5429/numerical_model)** — open-source Python framework for offshore wind turbine foundation analysis. `pip install op3-framework` · 140 tests · 39 V&V benchmarks · [Zenodo DOI](https://doi.org/10.5281/zenodo.19476542).
-- **[K-Fish](https://github.com/ksk5429/quant)** — 9-agent LLM swarm with Bayesian confidence-weighted fusion and a Calibrator agent that audits its reasoning. A precursor architecture for TMEF's multi-agent evidence aggregation with source-specific trust.
+### Under review
 
-## About me
+- Kim, K.-S., Lee, G.-S., Ryu, M.-S., Ryu, S., Kim, S.-R. Operational and environmental normalisation of natural
+  frequencies for offshore wind turbine foundation stiffness assessment. *Ocean Engineering*, manuscript
+  OE-D-26-15099, under review since 17 November 2026.
+- Kim, K.-S., Han, J. M., Ryu, S., Kim, S.-R. Progressive uplift failure of inverted-T foundations in level and sloping
+  ground observed by PIV. *Canadian Geotechnical Journal*, manuscript cgj-2026-1285, under review since 17 November
+  2026.
 
-BS in Civil & Environmental Engineering at UC Berkeley (2016). PhD at Seoul National University under Prof. Sung-Ryul Kim (defense September 2026). Director at Marine Master Technology Co. Engineer at Myungil Jack-Up Ocean, Korea's sole manufacturer of modular jack-up barges. Best reached by email.
+### In preparation
+
+- Monte Carlo propagation of soil uncertainty in 3D limit analysis of suction bucket foundations.
+- A coupled OptumGX-OpenFAST framework for aero-hydro-servo-elastic analysis of scour-affected offshore wind turbines.
+- From sensors to decisions: a physics-informed encoder and value-of-information framework for scour assessment of
+  offshore wind turbine tripod bucket foundations.
+
+### Conference papers
+
+- Kim, K.-S., Oh, S.-W., Kim, J.-W., Kim, S.-R. (2025). Effect of loading conditions on the natural frequency of
+  offshore wind turbines using centrifuge model test. *5th International Symposium on Frontiers in Offshore
+  Geotechnics (ISFOG 2025)*, Nantes, paper 115.
+- Kim, K.-S., Hwang, B.-Y., Lee, M.-H., Kim, S.-R. Effect of scour depth on natural frequency of offshore wind turbine
+  with tripod suction bucket foundation. *GEOTEC Hanoi 2023*, 2745–2758.
+  [doi:10.1007/978-981-99-9722-0_190](https://doi.org/10.1007/978-981-99-9722-0_190)
+- Kim, K. S., Gu, K. Y., Han, J. M., Tran, N. X., Kim, S. R., Cho, S. A. (2022). Centrifuge tests on the uplift behavior
+  of spread foundations in cohesionless soils. *10th International Conference on Physical Modelling in Geotechnics
+  (ICPMG 2022)*, Daejeon, paper P00100.
+
+## Education
+
+- **PhD**, Civil and Environmental Engineering, Seoul National University, 2026 (advisor: Prof. Sung-Ryul Kim)
+- **BS**, Civil and Environmental Engineering, University of California, Berkeley, 2016

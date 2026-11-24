@@ -1,31 +1,32 @@
 "kim":
   - firstname: ["Sung-Ryul", "S.-R.", "Sung Ryul"]
     url: https://cee.snu.ac.kr/
-  - firstname: ["Bong-Sik", "B.-S."]
+  - firstname: ["Beom-Soo", "B.-S."]
 
 "oh":
   - firstname: ["Seung-Won", "S.-W."]
 
 "hong":
-  - firstname: ["Sangwoo", "S."]
+  - firstname: ["Seongho", "S."]
 
 "gu":
-  - firstname: ["Kyung-Yong", "K.-Y."]
+  - firstname: ["Kyo-Young", "K.-Y."]
 
 "han":
-  - firstname: ["Jin-Mo", "J.-M."]
+  - firstname: ["Jayne M.", "J. M."]
 
 "tran":
-  - firstname: ["Nam-Xuan", "N.-X."]
+  - firstname: ["Nghiem Xuan", "N. X."]
 
 "ham":
   - firstname: ["Kyung-Won", "K.-W."]
 
 "lee":
-  - firstname: ["Geun-Soo", "G.-S."]
+  - firstname: ["Gwang-Se", "G.-S."]
 
 "ryu":
-  - firstname: ["Min-Seok", "M.-S."]
+  - firstname: ["Moo-Sung", "M.-S."]
+  - firstname: ["Seunghwa", "S."]
 
 "jo":
-  - firstname: ["Sungsoo", "S."]
+  - firstname: ["Seon-Ah", "S.-A."]

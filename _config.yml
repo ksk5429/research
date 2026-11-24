@@ -6,18 +6,18 @@ title: Kyeong Sun Kim # the website title (if blank, full name will be used inst
 first_name: Kyeong Sun
 middle_name: ""
 last_name: Kim
-email: kyeongsunkim@snu.ac.kr
+email: ""
 github_username: ksk5429
 scholar_userid: "" # put Google Scholar user id here when available
 orcid_id: "" # ORCID iD when available
 contact_note: >
-  Best reached by email. Replies within 24 hours on weekdays.
+  Contact through GitHub.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  PhD candidate in Civil & Environmental Engineering at Seoul National University.
-  Research program: Trust-weighted Multi-modal Evidence Fusion (TMEF) for engineering decisions.
+  PhD, Seoul National University; KAIST InnoCORE PRISM-AI Center.
+  Offshore wind turbine foundations, structural health monitoring, foundation uplift and digital twins.
 footer_text: >
   ©2026 Kyeong Sun Kim. Built with al-folio.
-keywords: structural health monitoring, digital twins, Bayesian fusion, value of information, multi-modal evidence fusion, trust calibration, offshore wind, LLM agents, physics-informed ML
+keywords: offshore wind, suction bucket foundations, scour, natural frequency, structural health monitoring, centrifuge modelling, particle image velocimetry, limit analysis, digital twins
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🌊 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
