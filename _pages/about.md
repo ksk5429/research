@@ -35,8 +35,9 @@ Detailed status of every paper and research line, the literature synthesis and t
   conditions, and a Kalman-filter digital twin for tracking foundation stiffness.
 - **Uplift of foundations.** Progressive failure of inverted-T foundations on level and sloping ground, observed by
   particle image velocimetry (PIV) in the centrifuge and studied numerically.
-- **Analysis and measurement software.** K-ponytail, a finite element limit analysis program, and K-DIC, a digital
-  image correlation program for laboratory measurements; both in development.
+- **Analysis and measurement software.** K-ponytail, a finite element limit analysis program (in development).
+  K-DIC: the author's own 2D DIC software, BSD-3-Clause, written independently from published methods (in
+  development).
 
 ## Publications
 
